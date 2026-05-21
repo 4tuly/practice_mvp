@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f2f5;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+nav {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background: #e0e0e0;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.habits-container {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.habit-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.habit-item:last-child {
+    border-bottom: none;
+}
+
+.habit-name {
+    font-size: 18px;
+    flex-grow: 1;
+}
+
+.habit-checkbox {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.delete-btn {
+    background: #ff4444;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.delete-btn:hover {
+    background: #cc0000;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.habit-form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.habit-form input {
+    flex-grow: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.habit-form button {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.habit-form button:hover {
+    background: #45a049;
+}
+
+.stats-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.progress-bar-container {
+    background: #e0e0e0;
+    border-radius: 25px;
+    height: 30px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.progress-fill {
+    background: #4CAF50;
+    height: 100%;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    width: 0%;
+    transition: width 0.3s;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    
+    .habit-form {
+        flex-direction: column;
+    }
+    
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .habit-item {
+        flex-wrap: wrap;
+    }
+    
+    .delete-btn {
+        margin-top: 10px;
+        width: 100%;
+    }
+}
